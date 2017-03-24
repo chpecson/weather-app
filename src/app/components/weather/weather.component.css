@@ -1,0 +1,29 @@
+.weather {
+    background-size: 100%;
+    background-position: center;
+}
+
+.weather-drizzle {
+    background: linear-gradient(rgba(10,10,150,0.4), rgba(100,100,255,0.2)), url("../../images/drizzle-min.jpg");
+}
+
+.weather-cloud {
+    background: linear-gradient(rgba(10,10,150,0.4), rgba(100,100,255,0.2)), url("../../images/clouds-min.jpg");
+}
+
+.weather-rain {
+    background: linear-gradient(rgba(10,10,150,0.4), rgba(100,100,255,0.2)), url("../../images/rain-min.jpg");
+}
+
+.weather-snow {
+    background: linear-gradient(rgba(10,10,150,0.4), rgba(100,100,255,0.2)), url("../../images/snow-min.jpg");
+}
+
+.weather-clear {
+    background: linear-gradient(rgba(10,10,150,0.4), rgba(100,100,255,0.2)), url("../../images/sunny-min.jpg");
+}
+
+.weather-thunderstorm {
+    background: linear-gradient(rgba(10,10,150,0.4), rgba(100,100,255,0.2)), url("../../images/thunder-min.jpg");
+}
+

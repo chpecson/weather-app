@@ -1,0 +1,55 @@
+<section class="text-center card-deck" 
+         *ngIf="!!weather">
+
+    <div class="card mt-1 cursor-pointer d-flex justify-content-center" 
+         [ngClass]="{ 
+             'card-primary': weather.celsius < 20,   
+             'bg-gradient': weather.celsius < 40,
+             'card-danger': weather.celsius > 40   
+         }"
+         *ngIf="weather.temperature"
+         (click)="toggleTemperatureUnit()">
+        <h3 class="text-shadow cursor-pointer align-self-center">
+            {{ weather.temperature }} ° {{ weather.temperatureUnit }}         
+        </h3>
+    </div>
+
+    <section *ngIf="weather.type" 
+             class="card card-primary weather"
+             [ngClass]="{
+                'weather-cloud': weather.type === 'Clouds'
+             }">
+        <h3 class="text-shadow">
+            {{ weather.type }}
+        </h3>
+
+        <div [ngSwitch]="weather.type | lowercase">
+            <p *ngSwitchCase="'drizzle'">
+                <i class="fa fa-tint fa-4x text-shadow" style="vertical-align: middle;"></i>
+            </p>
+            <p *ngSwitchCase="'clouds'">
+                <i class="fa fa-cloud fa-4x text-shadow" style="vertical-align: middle;"></i>
+            </p>
+            <p *ngSwitchCase="'rain'">
+                <i class="fa fa-tint fa-4x text-shadow" style="vertical-align: middle;"></i>
+            </p>
+            <p *ngSwitchCase="'snow'">
+                <i class="fa fa-snowflake-o fa-4x text-shadow" style="vertical-align: middle;"></i>
+            </p>
+            <p *ngSwitchCase="'clear'">
+                <i class="fa fa-sun-o fa-4x text-shadow" style="vertical-align: middle;"></i>
+            </p>
+            <p *ngSwitchCase="'thunderstorm'">
+                <i class="fa fa-bolt fa-4x text-shadow" style="vertical-align: middle;"></i>
+            </p>
+            <p *ngSwitchDefault>
+                Do nothing!
+            </p>
+        </div>
+    </section>
+    
+</section>
+
+<section *ngIf="!weather.temperature" class="mt-3">
+    Loading ...
+</section>    

@@ -1,3 +1,29 @@
-<h1>
-  {{title}}
-</h1>
+<div class="bg-gradient jumbotron bg-primary d-flex justify-content-center text-center">
+  <h1 class="align-self-center text-shadow">{{title}}</h1>
+</div>
+
+<main class="container">
+  <section class="location-container my-2">
+    <app-location></app-location>
+  </section>
+  <section class="weather-container my-2">
+    <app-weather></app-weather>
+  </section>
+  <div class="push"></div>
+</main>
+
+<footer class="card card-primary text-center pt-3">
+  <p>
+    Made with <span class="text-danger">❤</span> by
+    <a href="https://github.com/chpecson" target="_blank">Christian Pecson</a>
+    <a href="http://codepen.io/chpecson" target="_blank">
+      <i class="fa fa-codepen"></i>
+    </a>
+    <a href="https://twitter.com/chpecson" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+    <a href="https://web.facebook.com/chpecson" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </p>
+</footer>
