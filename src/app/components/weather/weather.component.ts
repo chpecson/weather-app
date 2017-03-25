@@ -14,6 +14,7 @@ export class WeatherComponent implements OnInit {
 
   private city: string = '';
   private weather: any = {};
+  private weatherType: string = '';
   
   constructor(private _weather: WeatherService) { }
 
@@ -33,8 +34,7 @@ export class WeatherComponent implements OnInit {
     this.weather.celsius = Math.round( weather.main.temp );
     this.weather.fahrenheit = Math.round( (weather.main.temp * 9) / 5 + 32 );
     this.weather.type = weather.weather[0].main;
-
-    console.log(this.weather);
+    this.weatherType = this.weather.type;
   }
 
   toggleTemperatureUnit() {

@@ -1,11 +1,6 @@
-.jumbotron { height: 40vh; }
 
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
+
+.jumbotron { height: 40vh; }
 
 footer a {
     color: #eaeaea;
